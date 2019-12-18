@@ -7,12 +7,13 @@
 
 
 
-var baseUrl = 'http://localhost:8000';// 通过变量保存基地址
+var BASE_URL = 'http://localhost:8000'; // 通过变量保存基地址
 
-
-// 后续的端口地址都基于基地址拼接即可
-var LOGIN = baseUrl + '/admin/login';
-var LOGINT = baseUrl + '/admin/logout';
-
-
-
+//  后续的接口地址都基于基地址拼接即可
+var LOGIN = BASE_URL + '/admin/login'; // 登录接口
+var LOGOUT = BASE_URL + '/admin/logout'; // 退出接口
+var GET_USER = BASE_URL + '/admin/getuser'; // 用户基本信息接口
+var EDIT = BASE_URL + '/admin/category_edit';  //编辑文章类别             
+var ADD = BASE_URL + '/admin/category_add';//新增文章类别
+var DELETE = BASE_URL + '/admin/category_delete';//删除文章类别
+var GET_CATE = BASE_URL + '/admin/category_search';//文章类别获取

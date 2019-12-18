@@ -138,6 +138,7 @@
             }
 
             // 3 发送请求
+            // 传入一个对象参数
             user.logout({
                 success: function () {
                     // 3.1 退出成功，跳转到登录页面
@@ -148,10 +149,16 @@
                     alert('网络不好，请稍后再试')
                 }
             })
-
-
         })
 
+        user.getUser({
+            success: function (res) {
+                // console.log(res);
+
+                $('.user_info img,.user_center_link img').prop('src', res.data.user_pic);
+                $('.user_info span').text('欢迎  ' + res.data.nickname);
+            }
+        })
 
 
 
